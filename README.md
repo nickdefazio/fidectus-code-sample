@@ -5,9 +5,15 @@ that you fork this repository, and modify your fork as needed.
 
 # Coding Exercise
 
-##  Problem statement
+##  Problem Statement
 The goal of this API is to provide a RESTful HTTP interface for other services to call, so that they may log events that happen
 within an imaginary system. For this exercise, imagine you are consuming events from a system that deals primarily with user registration.
+
+## Technology Stack
+This application should use the following:
+* Java 11 or greater
+* Spring Boot
+* Maven
 
 ## Events
 Events are made up of the following fields, all of which are required:
@@ -20,6 +26,7 @@ Events are made up of the following fields, all of which are required:
     * User updated registration information
 * A user ID
 * The time the event took place
+* An event hash, generated from the user id, time, and event type
 
 
 ## API Specification
@@ -29,8 +36,16 @@ Events are made up of the following fields, all of which are required:
 * The API should enforce required fields
 
 ## Storage Requirements
-//TODO
-For this code sample, we ask that the application implements some kind of storage engine
+This application should be capable of storing data within memory. Note that it does not need to persist this data between restarts. 
+We suggest one of the following, but you are welcome to implement storage however you see fit:
+
+1. A simple Spring Data/In memory database solution
+   - https://spring.io/guides/gs/accessing-data-jpa/ and https://spring.io/guides/gs/accessing-data-rest/ provide excellent samples of this
+2. If you are not familiar with Spring Data/storage, feel free to implement your own. This can be as simple as an ArrayList or similar that
+stores events, or something of your own design.
+
+Keep in mind that the objective here is to simply persist events by any means necessary, but we are looking for well written code that specifically separates storage
+responsibilities from REST concerns(https://en.wikipedia.org/wiki/SOLID).
 
 ## Testing requirements
 We are looking for you to implement well tested code for this sample. Ideally this is made up of a fair amount of unit tests for testing
