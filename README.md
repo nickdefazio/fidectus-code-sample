@@ -1,5 +1,5 @@
 # fidectus-code-sample
-This repository acts as a starting point for submitting a code sample for Fidectus. In this repo, you will find a basic 
+This repository is a starting point for submitting a code sample to Fidectus. It contains a basic 
 Java application to get you started, and some instructions on what we are looking for you to implement as a sample. We ask
 that you fork this repository, and modify your fork as needed.
 
@@ -7,7 +7,7 @@ that you fork this repository, and modify your fork as needed.
 
 ##  Problem Statement
 The goal of this API is to provide a RESTful HTTP interface for other services to call, so that they may log events that happen
-within an imaginary system. For this exercise, imagine you are consuming events from a system that deals primarily with user registration.
+within a system. For this exercise, you are consuming events from a system that deals primarily with user registration.
 
 ## Technology Stack
 This application should use the following:
@@ -30,7 +30,7 @@ Events are made up of the following fields, all of which are required:
 
 
 ## API Specification
-* The API should provide a way to get events by a given ID, a way to create new events, and a way to search them by a given user id.
+* The API should provide a way to get events by a given ID, a way to create new events, and a way to search for events by a given user id.
 * The API should not provide any means up updating or deleting events, as this log is meant to be immutable to consumers.
 * The API should only support JSON
 * The API should enforce required fields
@@ -48,8 +48,7 @@ Keep in mind that the objective here is to simply persist events by any means ne
 responsibilities from REST concerns(https://en.wikipedia.org/wiki/SOLID).
 
 ## Testing requirements
-We are looking for you to implement well tested code for this sample. Ideally this is made up of a fair amount of unit tests for testing
-your individual components, and some integration tests to test the application as a whole.
+We are looking for you to implement well tested code for this sample so unit and integration tests are in scope.
 
 To aid in this, we have provided the jacoco plugin, which can produce a unit test coverage report. Note that this does not mean we expect
 100% coverage, but we do ask that you implement what you feel is reasonable.
