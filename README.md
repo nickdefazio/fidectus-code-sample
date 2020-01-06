@@ -6,8 +6,12 @@ that you fork this repository, and modify your fork as needed.
 # Coding Exercise
 
 ##  Problem Statement
-The goal of this API is to provide a RESTful HTTP interface for other services to call, so that they may log events that happen
-within a system. For this exercise, you are consuming events from a system that deals primarily with user registration.
+Implement an "event log" RESTful API. 
+
+The API allows other services to log 
+simple events such as user registration errors.
+Focus is on the service itself and not non-functional 
+requirements such as authentication.
 
 ## Technology Stack
 This application should use the following:
@@ -36,19 +40,17 @@ Events are made up of the following fields, all of which are required:
 * The API should enforce required fields
 
 ## Storage Requirements
-This application should be capable of storing data within memory. Note that it does not need to persist this data between restarts. 
-We suggest one of the following, but you are welcome to implement storage however you see fit:
+This application should be capable of storing data in memory -- save data as you see fit:
 
 1. A simple Spring Data/In memory database solution
    - https://spring.io/guides/gs/accessing-data-jpa/ and https://spring.io/guides/gs/accessing-data-rest/ provide excellent samples of this
 2. If you are not familiar with Spring Data/storage, feel free to implement your own. This can be as simple as an ArrayList or similar that
 stores events, or something of your own design.
 
-Keep in mind that the objective here is to simply persist events by any means necessary, but we are looking for well written code that specifically separates storage
-responsibilities from REST concerns(https://en.wikipedia.org/wiki/SOLID).
+The objective here is to simply persist events by any means necessary, focus on well-written code and component architecture rather than persistence.
 
 ## Testing requirements
 We are looking for you to implement well tested code for this sample so unit and integration tests are in scope.
 
-To aid in this, we have provided the jacoco plugin, which can produce a unit test coverage report. Note that this does not mean we expect
+The jacoco plugin is provided to view unit test coverage report. Note that this does not mean we expect
 100% coverage, but we do ask that you implement what you feel is reasonable.
