@@ -1,9 +1,12 @@
 # fidectus-code-sample
 This repository is a starting point for submitting a code sample to Fidectus. It contains a basic 
-Java application to get you started, and some instructions on what we are looking for you to implement as a sample. We ask
-that you fork this repository, and modify your fork as needed.
+Java application to get you started, and some instructions on what we are looking for you to implement as a sample. 
 
-# Coding Exercise
+We ask that you fork this repository, and modify your fork as needed. 
+Please do not submit a PR but send us a link to your fork instead. 
+This is important since PR's would be visible to others.
+
+# Coding Exercise 
 
 ##  Problem Statement
 Implement an "event log" RESTful API. 
